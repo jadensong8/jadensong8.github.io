@@ -1,25 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Engineering Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal engineering ePortfolio of a Georgia Tech student.">
+  <title>Engineering ePortfolio | Georgia Tech Student</title>
+  <style>
+    :root { --navy:#051e39; --deep:#061321; --panel:#0e2843; --gold:#b39051; --white:#f5f7fb; --muted:#b7c6d5; --line:#29445f; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--deep); color:var(--white); font-family:Arial,Helvetica,sans-serif; line-height:1.7; }
+    a { color:inherit; }
+    a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    header { background:var(--navy); border-bottom:2px solid var(--gold); position:sticky; top:0; z-index:10; }
+    .wrap { max-width:1050px; margin:0 auto; padding:0 24px; }
+    nav { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:17px 0; }
+    .brand { font-size:18px; font-weight:800; letter-spacing:.3px; text-decoration:none; }
+    .brand span { color:var(--gold); }
+    .links { display:flex; flex-wrap:wrap; gap:18px; }
+    .links a { text-decoration:none; font-size:14px; color:var(--muted); }
+    .links a:hover { color:var(--gold); }
+    .hero { background:linear-gradient(145deg,var(--navy),#0b2e4b 75%,#163d5d); padding:100px 0 95px; border-bottom:1px solid var(--line); }
+    .eyebrow { text-transform:uppercase; font-size:13px; letter-spacing:2px; font-weight:bold; color:var(--gold); }
+    h1 { font-size:clamp(34px,5vw,58px); line-height:1.12; margin:15px 0 22px; max-width:800px; }
+    h1 span, h2 span { color:var(--gold); }
+    .lead { max-width:720px; font-size:19px; color:var(--muted); }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .button { display:inline-block; padding:12px 20px; border-radius:6px; text-decoration:none; font-weight:bold; border:1px solid var(--gold); }
+    .button.primary { background:var(--gold); color:#071729; }
+    .button.secondary { color:var(--gold); }
+    section { padding:76px 0; scroll-margin-top:100px; }
+    section:nth-of-type(even) { background:#091c30; }
+    h2 { margin:0 0 22px; font-size:30px; }
+    h3 { margin:0 0 12px; font-size:20px; color:var(--white); }
+    p { margin:0 0 16px; }
+    .text { max-width:850px; color:var(--muted); }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:25px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:9px; padding:26px; }
+    .card p { color:var(--muted); }
+    .tag { color:var(--gold); text-transform:uppercase; font-size:12px; font-weight:bold; letter-spacing:1px; }
+    .placeholder { border:1px dashed #7891a7; border-radius:7px; background:#112f4b; color:#d5dfeb; padding:28px; text-align:center; margin:18px 0; }
+    .steps { padding-left:22px; color:var(--muted); }
+    .steps li { margin-bottom:12px; }
+    footer { background:var(--navy); border-top:2px solid var(--gold); text-align:center; padding:28px 16px; color:var(--muted); font-size:13px; }
+    @media(max-width:650px) { .hero{padding:70px 0;} section{padding:56px 0;} nav{align-items:flex-start;} .links{gap:12px;} }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Engineering Portfolio</h1>
-    <p>I'm an engineering student at Georgia Tech.</p>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Main navigation">
+        <a class="brand" href="#home">ENGINEERING <span>ePORTFOLIO</span></a>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#goals">Career Goals</a>
+          <a href="#projects">Projects</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <h2>About Me</h2>
-    <p>Learn more about my background and interests.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="eyebrow">Georgia Institute of Technology · Student Portfolio</div>
+        <h1>Engineering ideas into <span>real-world impact.</span></h1>
+        <p class="lead">Welcome to my engineering ePortfolio. I'm a Georgia Tech student interested in applying design, technology, and creative problem-solving to challenges that matter.</p>
+        <div class="buttons">
+          <a class="button primary" href="#projects">Explore My Projects</a>
+          <a class="button secondary" href="#about">About Me</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Resume</h2>
-    <p>My resume will be available here.</p>
+    <section id="about">
+      <div class="wrap">
+        <div class="eyebrow">01 · My Story</div>
+        <h2>About <span>Me</span></h2>
+        <div class="text">
+          <p>I'm an engineering student at the Georgia Institute of Technology with a background in applied mathematics and computer science. My interests include robotics, CAD, and designing practical systems that make everyday tasks safer and more accessible.</p>
+          <p>My experiences have shaped my interest in technology that supports human movement and helps prevent injury. I enjoy learning how engineering concepts become functional designs through modeling, prototyping, and testing.</p>
+          <p><strong>Personalize this section:</strong> Add your academic journey, military experience (if you want to share it publicly), and what motivates you as an engineer.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Career Goals</h2>
-    <p>My engineering career goals and aspirations.</p>
+    <section id="resume">
+      <div class="wrap">
+        <div class="eyebrow">02 · Qualifications</div>
+        <h2>My <span>Resume</span></h2>
+        <p class="text">A summary of my education, technical skills, project experience, and professional experience.</p>
+        <div class="card">
+          <h3>Resume PDF</h3>
+          <p>Upload your resume as <code>resume.pdf</code> in this GitHub repository. Once uploaded, the button below will open it in a new tab, where visitors can view or download it.</p>
+          <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">View / Download Resume</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Technical Projects</h2>
-    <p>Explore my engineering projects.</p>
+    <section id="goals">
+      <div class="wrap">
+        <div class="eyebrow">03 · Looking Ahead</div>
+        <h2>Career <span>Goals</span></h2>
+        <p class="text">My long-term goal is to contribute to the development of human-centered engineering technologies, particularly wearable robotics and systems that help people move safely and effectively.</p>
+        <div class="cards">
+          <div class="card"><h3>Build Technical Skills</h3><p>Continue developing CAD, programming, circuit analysis, and prototyping skills through coursework and independent practice.</p></div>
+          <div class="card"><h3>Gain Project Experience</h3><p>Work with engineering teams and research groups to design, test, and improve real-world systems.</p></div>
+          <div class="card"><h3>Contribute to Robotics</h3><p>Pursue research and professional opportunities in robotics, assistive technology, and injury prevention.</p></div>
+        </div>
+        <p class="text" style="margin-top:22px"><strong>Before submitting:</strong> Add specific short-term milestones, courses, internships, or research opportunities that will help you reach these goals.</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="eyebrow">04 · Engineering Work</div>
+        <h2>Technical <span>Projects</span></h2>
+        <p class="text">This portfolio will grow as I complete more technical projects at Georgia Tech.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="tag">Mechanical Design · CAD</div>
+            <h3>Stair-Lift Design</h3>
+            <div class="placeholder">Add your own SolidWorks image or project photo here</div>
+            <p>Design work focused on a stair-lift system intended to improve accessibility. My work includes exploring seat components and how they integrate with the broader system.</p>
+            <p><strong>To add:</strong> Your design process, CAD renders, engineering decisions, and outcomes.</p>
+          </article>
+          <article class="card">
+            <div class="tag">Required Assignment Feature</div>
+            <h3>Discovery Project</h3>
+            <div class="placeholder">Add at least one photo or visual that you created</div>
+            <p><strong>The Problem:</strong> [Describe the engineering challenge.]</p>
+            <p><strong>The Process:</strong> [Describe your research, design, iterations, and testing.]</p>
+            <p><strong>The Outcome:</strong> [Explain results, what you learned, and next steps.]</p>
+            <p><strong>Assignment reminder:</strong> Expand this feature to at least 400 words and include visuals before the Discovery Project Showcase.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Personal student ePortfolio · Georgia Institute of Technology · Not an official university website</footer>
 </body>
 </html>
