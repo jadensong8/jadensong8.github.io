@@ -40,6 +40,15 @@
     .card p { color:var(--muted); }
     .tag { color:var(--gold); text-transform:uppercase; font-size:12px; font-weight:bold; letter-spacing:1px; }
     .placeholder { border:1px dashed #7891a7; border-radius:7px; background:#112f4b; color:#d5dfeb; padding:28px; text-align:center; margin:18px 0; }
+    .hero-layout { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(220px,.75fr); align-items:center; gap:42px; }
+    .hero-photo { width:100%; max-height:380px; aspect-ratio:4/5; object-fit:cover; border-radius:14px; border:2px solid var(--gold); box-shadow:0 20px 55px #0005; }
+    .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:28px; }
+    figure { margin:0; }
+    .gallery figure { background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+    .gallery img { display:block; width:100%; height:230px; object-fit:cover; }
+    figcaption { padding:12px 14px; color:var(--muted); font-size:13px; }
+    .project-image { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:7px; margin:16px 0; }
+    @media(max-width:700px) { .hero-layout { grid-template-columns:1fr; } .hero-photo { max-width:300px; } .gallery { grid-template-columns:1fr; } .gallery img { height:260px; } }
     .steps { padding-left:22px; color:var(--muted); }
     .steps li { margin-bottom:12px; }
     footer { background:var(--navy); border-top:2px solid var(--gold); text-align:center; padding:28px 16px; color:var(--muted); font-size:13px; }
@@ -64,12 +73,16 @@
   <main>
     <section class="hero" id="home">
       <div class="wrap">
+        <div class="hero-layout"><div>
         <div class="eyebrow">Georgia Institute of Technology · Student Portfolio</div>
         <h1>Engineering ideas into <span>real-world impact.</span></h1>
         <p class="lead">Welcome to my engineering ePortfolio. I'm a Georgia Tech student interested in applying design, technology, and creative problem-solving to challenges that matter.</p>
         <div class="buttons">
           <a class="button primary" href="#projects">Explore My Projects</a>
           <a class="button secondary" href="#about">About Me</a>
+        </div>
+        </div>
+        <img class="hero-photo" src="portrait.jpg" alt="Personal portrait at an outdoor cafe">
         </div>
       </div>
     </section>
@@ -79,9 +92,14 @@
         <div class="eyebrow">01 · My Story</div>
         <h2>About <span>Me</span></h2>
         <div class="text">
-          <p>I'm an engineering student at the Georgia Institute of Technology with a background in applied mathematics and computer science. My interests include robotics, CAD, and designing practical systems that make everyday tasks safer and more accessible.</p>
-          <p>My experiences have shaped my interest in technology that supports human movement and helps prevent injury. I enjoy learning how engineering concepts become functional designs through modeling, prototyping, and testing.</p>
-          <p><strong>Personalize this section:</strong> Add your academic journey, military experience (if you want to share it publicly), and what motivates you as an engineer.</p>
+          <p>I'm an engineering student at the Georgia Institute of Technology with a background in applied mathematics and computer science from Emory University. My academic journey has strengthened my analytical problem-solving skills, while Georgia Tech has given me opportunities to apply them through hands-on engineering projects.</p>
+          <p>During my mandatory military service in South Korea, I served at the Joint Security Area (JSA) along the Korean Demilitarized Zone. I witnessed fellow soldiers experience serious back injuries from physically demanding tasks, sometimes severe enough to end their service. That experience inspired my interest in wearable robotics and exoskeletons that can support human movement and reduce the risk of injury.</p>
+          <p>I'm developing skills in computer-aided design (CAD), electronics, and mechanical system design. Beyond engineering, I enjoy playing guitar and collaborating with others. I hope to combine my academic background and personal experiences to develop practical technologies that improve safety and mobility.</p>
+        </div>
+        <div class="gallery" aria-label="Photos from my experiences">
+          <figure><img src="jsa-service.jpg" alt="During my military service near a Military Demarcation Line sign" loading="lazy"><figcaption>My military service at the Joint Security Area (JSA)</figcaption></figure>
+          <figure><img src="emory.jpg" alt="Group photograph at the Emory University sign" loading="lazy"><figcaption>My academic journey at Emory University</figcaption></figure>
+          <figure><img src="guitar.jpg" alt="Playing electric guitar during a live performance" loading="lazy"><figcaption>Outside engineering: playing electric guitar</figcaption></figure>
         </div>
       </div>
     </section>
@@ -125,6 +143,13 @@
             <div class="placeholder">Add your own SolidWorks image or project photo here</div>
             <p>Design work focused on a stair-lift system intended to improve accessibility. My work includes exploring seat components and how they integrate with the broader system.</p>
             <p><strong>To add:</strong> Your design process, CAD renders, engineering decisions, and outcomes.</p>
+          </article>
+          <article class="card">
+            <div class="tag">Embedded Systems · Electronics</div>
+            <h3>Microcontroller Circuit Project</h3>
+            <img class="project-image" src="electronics.jpg" alt="Breadboard prototype with a microcontroller, buttons, buzzer, and connected wiring" loading="lazy">
+            <p>A hands-on circuit prototype combining a microcontroller, pushbuttons, a buzzer, and other components on a breadboard.</p>
+            <p><strong>In progress:</strong> Add a description of the design goals, code, debugging process, and tested results.</p>
           </article>
           <article class="card">
             <div class="tag">Required Assignment Feature</div>
