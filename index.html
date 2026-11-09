@@ -53,6 +53,12 @@
     .steps li { margin-bottom:12px; }
     footer { background:var(--navy); border-top:2px solid var(--gold); text-align:center; padding:28px 16px; color:var(--muted); font-size:13px; }
     @media(max-width:650px) { .hero{padding:70px 0;} section{padding:56px 0;} nav{align-items:flex-start;} .links{gap:12px;} }
+
+    .music-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:28px; }
+    .music-card { padding:18px; }
+    .music-card img { display:block; width:100%; height:255px; object-fit:cover; object-position:center 35%; border-radius:6px; margin-bottom:20px; }
+    .music-card h3 { margin-top:7px; }
+    @media(max-width:850px) { .music-grid { grid-template-columns:1fr; } .music-card img { height:320px; object-position:center 30%; } }
   </style>
 </head>
 <body>
@@ -65,6 +71,7 @@
           <a href="#resume">Resume</a>
           <a href="#goals">Career Goals</a>
           <a href="#projects">Projects</a>
+          <a href="#hobbies">Hobbies &amp; Music</a>
         </div>
       </nav>
     </div>
@@ -99,7 +106,7 @@
         <div class="gallery" aria-label="Photos from my experiences">
           <figure><img src="jsa-service.jpg" alt="During my military service near a Military Demarcation Line sign" loading="lazy"><figcaption>My military service at the Joint Security Area (JSA)</figcaption></figure>
           <figure><img src="emory.jpg" alt="Group photograph at the Emory University sign" loading="lazy"><figcaption>My academic journey at Emory University</figcaption></figure>
-          <figure><img src="guitar.jpg" alt="Playing electric guitar during a live performance" loading="lazy"><figcaption>Outside engineering: playing electric guitar</figcaption></figure>
+          <figure><img src="jsa-panorama.jpg" alt="View across the Joint Security Area buildings" loading="lazy"><figcaption>A view of the Joint Security Area</figcaption></figure>
         </div>
       </div>
     </section>
@@ -144,36 +151,39 @@
     real-world challenges.</p></div>
           <div class="card"><h3>Serve the Veteran Community</h3><p>Explore opportunities to serve as a combat medic in the Georgia Army National Guard while continuing to support U.S. and South Korean veteran communities. I hope to combine my military experience, medical training, and engineering background to improve the health, safety, and mobility of service members and veterans.</p></div>
         </div>
+      </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
         <div class="eyebrow">04 · Engineering Work</div>
         <h2>Technical <span>Projects</span></h2>
-        <p class="text">This portfolio will grow as I complete more technical projects at Georgia Tech.</p>
-        <div class="cards">
-          <article class="card">
-            <div class="tag"></div>
-            <h3></h3>
-            <div class="placeholder"></div>
-            <p></p>
-            <p><strong></strong></p>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <div class="wrap">
+        <div class="eyebrow">05 · Beyond Engineering</div>
+        <h2>Hobbies <span>&amp; Music</span></h2>
+        <p class="text">Music has been an important part of my life alongside academics and engineering. Performing with different groups has given me opportunities to collaborate, practice consistently, and connect with people through music.</p>
+        <div class="music-grid">
+          <article class="card music-card">
+            <img src="hazel-eyes-bass.jpg" alt="Playing bass guitar on stage with Hazel Eyes" loading="lazy">
+            <div class="tag">Emory University · Bass</div>
+            <h3>Hazel Eyes Band</h3>
+            <p>During my time at Emory University, I played bass for Hazel Eyes. Performing with the band helped me develop my sense of rhythm and learn how to support a group through listening and teamwork.</p>
           </article>
-          <article class="card">
-            <div class="tag">Embedded Systems · Electronics</div>
-            <h3>Microcontroller Circuit Project</h3>
-            <img class="project-image" src="electronics.jpg" alt="Breadboard prototype with a microcontroller, buttons, buzzer, and connected wiring" loading="lazy">
-            <p></p>
-            <p><strong></strong></p>
+          <article class="card music-card">
+            <img src="guitar.jpg" alt="Playing electric guitar at church in a red T-shirt" loading="lazy">
+            <div class="tag">Church · Guitar</div>
+            <h3>Church Music</h3>
+            <p>I also play guitar at my church. Preparing music and playing with others has given me a meaningful way to contribute to my community while continuing to improve as a musician.</p>
           </article>
-          <article class="card">
-            <div class="tag"></div>
-            <h3>Discovery Project</h3>
-            <div class="placeholder"></div>
-            <p><strong></strong></p>
-            <p><strong></strong></p>
-            <p><strong></strong></p>
-            <p><strong></strong></p>
+          <article class="card music-card">
+            <img src="oscar-band.jpg" alt="Group photo with fellow musicians at Georgia Tech" loading="lazy">
+            <div class="tag">Georgia Tech · Guitar</div>
+            <h3>Oscar Band</h3>
+            <p>I currently play guitar for Oscar Band at Georgia Tech. Being part of the band allows me to continue performing and collaborating with other musicians while pursuing my engineering studies.</p>
           </article>
         </div>
       </div>
